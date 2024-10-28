@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ecommerce-app/static/css/main.51326922.css",
+    "main.js": "/ecommerce-app/static/js/main.a7ec1133.js",
+    "static/js/453.ce58f9bb.chunk.js": "/ecommerce-app/static/js/453.ce58f9bb.chunk.js",
+    "static/media/Poop.png": "/ecommerce-app/static/media/Poop.adeaf7cb5eaf2a3a1cfe.png",
+    "index.html": "/ecommerce-app/index.html",
+    "main.51326922.css.map": "/ecommerce-app/static/css/main.51326922.css.map",
+    "main.a7ec1133.js.map": "/ecommerce-app/static/js/main.a7ec1133.js.map",
+    "453.ce58f9bb.chunk.js.map": "/ecommerce-app/static/js/453.ce58f9bb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51326922.css",
+    "static/js/main.a7ec1133.js"
+  ]
+}
