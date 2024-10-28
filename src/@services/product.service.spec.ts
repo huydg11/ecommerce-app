@@ -17,7 +17,6 @@ describe("productService", () => {
             {
                 id: 1,
                 title: "Product 1",
-                name: "Product 1",
                 price: '100',
                 description: "Description 1",
                 image: "image1.jpg",
@@ -25,7 +24,6 @@ describe("productService", () => {
             {
                 id: 2,
                 title: "Product 2",
-                name: "Product 2",
                 price: '200',
                 description: "Description 2",
                 image: "image2.jpg",

@@ -5,6 +5,7 @@ import Products from './@components/ProductList';
 import Home from './@pages/Home';
 import ProductResult from './@components/ProductItem';
 import Layout from './Layout';
+import Manage from './@pages/Manage';
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
   const routes = [
     { path: '/', element: <Home /> },
     { path: '/products', element: <Products /> },
-    { path: '/products/:productId', element: <ProductResult /> },
+    { path: '/products/search', element: <ProductResult /> },
+    {path: '/admin/manage', element: <Manage/>}
 
   ];
 
