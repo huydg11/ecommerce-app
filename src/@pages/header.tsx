@@ -30,7 +30,7 @@ function Header(): JSX.Element {
                             <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" className="rounded-circle" />
                         </a>
                         <ul className="dropdown-menu text-small">
-                            <li><a className="dropdown-item" href="#">New project...</a></li>
+                            <li><a className="dropdown-item" href="/admin/manage">Manage Product</a></li>
                             <li><a className="dropdown-item" href="#">Settings</a></li>
                             <li><a className="dropdown-item" href="#">Profile</a></li>
                             <li><hr className="dropdown-divider" /></li>
