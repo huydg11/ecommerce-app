@@ -8,32 +8,32 @@ const ProductResult = () => {
   const [error, setError] = useState<boolean>(false);
 
   const location = useLocation();
-
-  const itemNumber = location.pathname.replace('/products/', '');
+  const searchParams = new URLSearchParams(location.search);
+  const searchTerm = searchParams.get('name') || '';
 
   useEffect(() => {
-    if (itemNumber) {
-      fetch(`https://fakestoreapi.com/products/${itemNumber}`)
+    if (searchTerm) {
+      fetch(`https://fakestoreapi.com/products?name=${searchTerm}`)
         .then((res) => {
           if (!res.ok) {
-            throw new Error("Product not found");
+            throw new Error('Product not found');
           }
           return res.json();
         })
         .then((json) => setProduct(json))
         .catch((err) => {
-          console.error("Error fetching product:", err);
+          console.error('Error fetching product:', err);
           setError(true);
         });
     }
-  }, [itemNumber]);
+  }, [searchTerm]);
 
   return (
 
     <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mx-auto justify-around">
 
       {error ? (
-        <p>Product not found.</p> 
+        <p>Product not found.</p>
       ) : product ? (
         <div className="col max-w-4xl" key={product.id}>
           <div className="card h-100 d-flex flex-column">

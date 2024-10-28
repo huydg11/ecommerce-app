@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 import Logo from '../Poop.png'
 import SearchBar from '../@components/SearchBar';
 

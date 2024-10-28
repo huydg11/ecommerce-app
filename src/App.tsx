@@ -12,7 +12,7 @@ function App() {
   const routes = [
     { path: '/', element: <Home /> },
     { path: '/products', element: <Products /> },
-    { path: '/products/:productId', element: <ProductResult /> },
+    { path: '/products/search', element: <ProductResult /> },
 
   ];
 
