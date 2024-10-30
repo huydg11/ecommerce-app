@@ -8,7 +8,7 @@ function Home(): JSX.Element {
   return (
     <div className="container m-2">
     
-    <Products/>
+    <Products />
      
     </div>
   );

@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
 
+import { getAllProducts } from '../@services/product.service';
+
 import { Product } from '../model/product.model';
 
 const Products = () => {
     const [products, setProducts] = useState<Product[]>([]);
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products')
-            .then((res) => res.json())
-            .then((json) => setProducts(json));
+
+        getAllProducts()
+        .then((json) => setProducts(json))
+        .catch((error) => console.error("Failed to load products:", error));
+
     }, []);
 
     return (
