@@ -11,7 +11,7 @@ function App() {
 
   const routes = [
     { path: '/', element: <Home /> },
-    { path: '/products', element: <Products /> },
+    { path: '/products', element: <Products searchTerm="" /> },
     { path: '/products/search', element: <ProductResult /> },
 
   ];
