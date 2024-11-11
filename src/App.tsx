@@ -3,7 +3,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Products from './@components/ProductList';
 import Home from './@pages/Home';
-import ProductResult from './@components/ProductItem';
 import Layout from './Layout';
 
 
@@ -12,7 +11,6 @@ function App() {
   const routes = [
     { path: '/', element: <Home /> },
     { path: '/products', element: <Products searchTerm="" /> },
-    { path: '/products/search', element: <ProductResult /> },
 
   ];
 
