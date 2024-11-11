@@ -2,6 +2,7 @@
   "parser": "@typescript-eslint/parser",
   "extends": [
     "eslint:recommended",
+    "eslint-config-prettier",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
@@ -21,5 +22,9 @@
     "react": {
       "version": "detect"
     }
-  }
+  },
+  "plugins": [
+    "eslint-plugin-prettier",
+    "react"
+  ]
 }
