@@ -7,6 +7,7 @@ const Products = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [productsPerPage] = useState(10);
 
+
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
             .then((res) => res.json())
@@ -16,7 +17,6 @@ const Products = () => {
     const indexOfLastProduct = currentPage * productsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
     const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
-
     const totalPages = Math.ceil(products.length / productsPerPage);
 
     return (
