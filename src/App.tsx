@@ -11,15 +11,8 @@ function App() {
 
   const routes = [
     { path: '/', element: <Home /> },
-<<<<<<< HEAD
-    { path: '/products', element: <Products /> },
-    { path: '/products/search', element: <ProductResult /> },
-    {path: '/admin/manage', element: <Manage/>}
-=======
     { path: '/admin/manage', element: <Manage/>},
     { path: '/products', element: <Products searchTerm="" /> }
-
->>>>>>> 134ea61ba76a68e0475820b8d8964ebf090ded04
 
   ];
 

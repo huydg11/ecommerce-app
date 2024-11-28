@@ -38,6 +38,61 @@ export const searchProductByName = async (name: string) => {
     }
 };
 
+
+export const addNewProduct = async (newProduct: { title: string; price: number; description: string; image: string }) => {
+    try {
+        const response = await fetch(`${BASE_URL}/products`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newProduct),
+        });
+        if (!response.ok) {
+            throw new Error(`Error: ${response.status}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error("Failed to add new product:", error);
+        throw error;
+    }
+};
+
+export const updateProductById = async (id: number, updatedData: { title: string; price: number; description: string; image: string }) => {
+    try {
+        const response = await fetch(`${BASE_URL}/products/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(updatedData),
+        });
+        if (!response.ok) {
+            throw new Error(`Error: ${response.status}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error("Failed to update product by ID:", error);
+        throw error;
+    }
+};
+
+export const deleteProductById = async (id: number) => {
+    try {
+        const response = await fetch(`${BASE_URL}/products/${id}`, {
+            method: "DELETE",
+        });
+        if (!response.ok) {
+            throw new Error(`Error: ${response.status}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error("Failed to delete product by ID:", error);
+        throw error;
+    }
+};
+
+
 // GET
 // export const getAllProducts = createAsyncThunk(BASE_URL, async (_, {}) => {
 //     try {
