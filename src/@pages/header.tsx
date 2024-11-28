@@ -1,6 +1,5 @@
 import React from 'react';
 import Logo from '../Poop.png'
-import SearchBar from '../@components/SearchBar';
 
 
 function Header(): JSX.Element {
@@ -23,7 +22,7 @@ function Header(): JSX.Element {
                         <li><a href="#" className="nav-link px-2 link-body-emphasis">Products</a></li>
                     </ul>
 
-                    <SearchBar/>
+                
 
                     <div className="dropdown text-end">
                         <a href="#" className="flex items-center link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">

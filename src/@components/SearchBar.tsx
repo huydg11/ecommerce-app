@@ -1,26 +1,38 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 
+interface SearchBarProps {
+    onSearch: (term: string) => void;
+}
 
-function SearchBar(): JSX.Element {
 
-  const [searchTerm, setSearchTerm] = useState('');
-  const navigate = useNavigate();
+function SearchBar({ onSearch }: SearchBarProps): JSX.Element {
+    const [searchTerm, setSearchTerm] = useState('');
 
-  const handleSubmit = (event: React.FormEvent) => {
-      event.preventDefault();
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const term = event.target.value;
+        setSearchTerm(term);
+        onSearch(term);
+    };
 
-      if (searchTerm) {
-          navigate(`/products/search?name=${searchTerm}`);
-      }
-  };
+    const handleFormSubmit = (event: React.FormEvent) => {
+        event.preventDefault();
+        onSearch(searchTerm);
+    };
 
-  return (
-      <form onSubmit={handleSubmit} className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input id="searchTerm" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} type="text" className="form-control" placeholder="Search..." aria-label="Search" />
-      </form>
-  );
+    return (
+        <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search" onSubmit={handleFormSubmit}>
+            <input
+                id="searchTerm"
+                type="text"
+                className="form-control"
+                placeholder="Search..."
+                aria-label="Search"
+                value={searchTerm}
+                onChange={handleInputChange}
+            />
+        </form>
+    );
 }
 
 export default SearchBar;
