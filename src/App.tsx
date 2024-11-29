@@ -4,13 +4,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Products from './@components/ProductList';
 import Home from './@pages/Home';
 import Layout from './Layout';
+import Manage from './@pages/Manage';
 
 
 function App() {
 
   const routes = [
     { path: '/', element: <Home /> },
-    { path: '/products', element: <Products searchTerm="" /> },
+    { path: '/admin/manage', element: <Manage/>},
+    { path: '/products', element: <Products searchTerm="" /> }
 
   ];
 
